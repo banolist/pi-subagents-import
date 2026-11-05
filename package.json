@@ -1,0 +1,24 @@
+{
+  "name": "@banolist/pi-subagents-import",
+  "version": "0.1.0",
+  "description": "Read project Codex agent profiles through pi-subagents runtime registration",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["pi-package", "pi", "codex", "subagents"],
+  "engines": { "node": ">=22.19.0" },
+  "files": ["index.ts", "src", "README.md", "LICENSE"],
+  "pi": { "extensions": ["./index.ts"] },
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/unit.test.ts",
+    "test:integration": "node --experimental-strip-types --test test/integration.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "smol-toml": "1.9.1" },
+  "peerDependencies": { "@earendil-works/pi-coding-agent": ">=1.2.0" },
+  "peerDependenciesMeta": { "@earendil-works/pi-coding-agent": { "optional": true } },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.2.0",
+    "@types/node": "24.13.3",
+    "typescript": "5.9.3"
+  }
+}
